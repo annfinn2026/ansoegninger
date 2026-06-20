@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afgangsbevis - Pædagoguddannelsen - Hans A. Johannesen</title>
+  <!-- Google Fonts: Playfair Display for headers, Inter for text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --navy: #0f172a;        /* Deep Slate Navy */
+      --gold: #b45309;        /* Warm Amber/Gold */
+      --gold-light: #fef3c7;  /* Very Light Gold Bg */
+      --text: #334155;        /* Slate 700 */
+      --text-muted: #64748b;  /* Slate 500 */
+      --border: #cbd5e1;      /* Slate 300 */
+      --page-bg: #f8fafc;     /* Slate 50 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Certificate Page Wrapper */
+    .certificate-page {
+      max-width: 820px;
+      margin: 0 auto 40px auto;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 60px 80px;
+      position: relative;
+      border: 1px solid #e2e8f0;
+      min-height: 1120px; /* Standard A4 ratio approx */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Elegant Academic Border */
+    .certificate-border {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      border: 1px solid var(--border);
+      pointer-events: none;
+    }
+
+    .certificate-border-inner {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      border: 2px solid var(--navy);
+      pointer-events: none;
+    }
+
+    /* Header Styling */
+    .cert-header {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .institution-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .cert-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+      display: inline-block;
+      padding: 5px 20px;
+      margin-top: 10px;
+    }
+
+    /* Recipient Info */
+    .recipient-info {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 15px;
+    }
+
+    .recipient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 15px 0 5px 0;
+    }
+
+    .recipient-cpr {
+      font-family: monospace;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .law-text {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* Graded Sections */
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 30px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--navy);
+      padding-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Tables */
+    .grade-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    .grade-table th {
+      background-color: var(--navy);
+      color: #ffffff;
+      text-align: left;
+      padding: 6px 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+    }
+
+    .grade-table td {
+      padding: 6px 12px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .grade-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .grade-table td.grade-value {
+      font-weight: 600;
+      color: var(--navy);
+      text-align: right;
+    }
+
+    .grade-table td.grade-approved {
+      font-weight: 500;
+      color: #15803d; /* Green */
+      text-align: right;
+    }
+
+    /* Two Column Layout for grades on page 1 */
+    .grades-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+    }
+
+    /* Speciality / Speciale Block */
+    .speciale-block {
+      background-color: var(--page-bg);
+      border: 1px solid var(--border);
+      padding: 15px;
+      border-radius: 4px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .speciale-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .speciale-desc {
+      font-style: italic;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .speciale-grade {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      color: var(--navy);
+      border-top: 1px dashed var(--border);
+      padding-top: 6px;
+    }
+
+    /* Page 2 specific layout */
+    .praktik-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-size: 13.5px;
+      margin-top: 15px;
+    }
+
+    .praktik-item {
+      padding: 12px 15px;
+      background-color: var(--page-bg);
+      border-left: 3px solid var(--navy);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .praktik-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    /* Signature & Seal Area */
+    .footer-stamp-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 40px;
+    }
+
+    .signature-block {
+      width: 200px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .signature-line {
+      border-top: 1px solid var(--text-muted);
+      margin-top: 40px;
+      padding-top: 5px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    /* Red Scalloped Wax Seal (Pure CSS) */
+    .wax-seal {
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, #dc2626 60%, #b91c1c 90%);
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      border: 2px dashed #b91c1c;
+      animation: rotate-seal 60s infinite linear;
+    }
+
+    .wax-seal-inner {
+      width: 76px;
+      height: 76px;
+      border: 1px double #fca5a5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fee2e2;
+      font-size: 7px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 5px;
+      line-height: 1.2;
+    }
+
+    /* Academic Footer */
+    .cert-footer-text {
+      text-align: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 15px;
+      margin-top: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Top Ribbon Info Bar */
+    .digital-transcript-ribbon {
+      background-color: var(--gold-light);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 820px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 820px;
+      margin: 0 auto 10px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--navy);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1e293b;
+    }
+
+    .btn-secondary {
+      background-color: var(--text-muted);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--navy);
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .certificate-page {
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        padding: 40px 40px;
+        margin: 0;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+      .certificate-border {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+      }
+      .print-controls, .digital-transcript-ribbon {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls -->
+  <div class="print-controls">
+    <a href="../job_skabelon.md" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Udskriv / Gem som PDF</button>
+  </div>
+
+  <!-- Ribbon -->
+  <div class="digital-transcript-ribbon">
+    <i class="fa-solid fa-circle-info" style="font-size: 16px;"></i>
+    <span><strong>Digitalt Afgangsbevis:</strong> Dette er en professionelt opsat, læsbar digital udskrift af det originale eksamensbevis fra Gentofte Seminarium (2000). Det kan vedlægges som et letlæseligt bilag til ansøgninger.</span>
+  </div>
+
+  <!-- PAGE 1 -->
+  <div class="certificate-page">
+    <div class="certificate-border">
+      <div class="certificate-border-inner"></div>
+    </div>
+
+    <div>
+      <!-- Header -->
+      <div class="cert-header">
+        <div class="institution-name">Gentofte Seminarium</div>
+        <div class="cert-title">Afgangsbevis for Pædagoguddannelsen</div>
+      </div>
+
+      <!-- Recipient -->
+      <div class="recipient-info">
+        <span>Det attesteres hermed, at</span>
+        <div class="recipient-name">Hans Annfinn Johannesen</div>
+        <span class="recipient-cpr">CPR-nr: 140463-XXXX</span>
+      </div>
+
+      <p class="law-text">
+        har gennemført uddannelsen til pædagog (social educator) i henhold til Lov om uddannelse af pædagoger nr. 370 af 6. juni 1991 og er dimitteret den 21/01/2000.
+      </p>
+
+      <!-- Grades grid -->
+      <div class="grades-grid">
+        <!-- Standpunktsbedømmelser -->
+        <div>
+          <h3 class="section-heading">Standpunktsbedømmelser</h3>
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>Fag</th>
+                <th style="text-align: right;">Bedømmelse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Psykologi</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Pædagogik</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Socialfag</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Sundhedsfag</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Musik</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Bevægelsesfag</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Værkstedsfag</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Drama</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Naturfag</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Dansk</td><td class="grade-approved">Godkendt</td></tr>
+              <tr><td>Kommunikation, organisation & ledelse</td><td class="grade-approved">Godkendt</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Afsluttende prøver & Speciale -->
+        <div>
+          <h3 class="section-heading">Afsluttende prøver</h3>
+          <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 8px; font-style: italic;">
+            Efter Lovbekendtgørelsens §18 og §19 (Karakterskala: 13-skalaen)
+          </p>
+          
+          <table class="grade-table">
+            <thead>
+              <tr>
+                <th>Prøvetype / Fag</th>
+                <th style="text-align: right;">Karakter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>1. Individuel skriftlig prøve</strong><br>
+                  <span style="font-size:11px; color:var(--text-muted);">Fag: Psykologi, Pædagogik</span>
+                </td>
+                <td class="grade-value">10</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>2. Seminarieprøve</strong><br>
+                  <span style="font-size:11px; color:var(--text-muted);">Fag: Sundhedsfag</span>
+                </td>
+                <td class="grade-value">10</td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>3. Seminarieprøve</strong><br>
+                  <span style="font-size:11px; color:var(--text-muted);">Fag: Bevægelsesfag</span>
+                </td>
+                <td class="grade-value">8</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="section-heading">Speciale</h3>
+          <div class="speciale-block">
+            <div class="speciale-title">Emne:</div>
+            <div class="speciale-desc">”Den flerkulturelle udfordring i danske børnehaver”</div>
+            <div class="speciale-grade">
+              <span>Karakter (13-skalaen):</span>
+              <span style="color: var(--navy);">10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div>
+      <div class="footer-stamp-area" style="justify-content: flex-end;">
+        <span style="font-size: 12px; color: var(--text-muted);">Side 1 af 2</span>
+      </div>
+      <div class="cert-footer-text">
+        GENTOFTE SEMINARIUM • HARTMANNSVEJ 22, 2900 HELLERUP
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="certificate-page">
+    <div class="certificate-border">
+      <div class="certificate-border-inner"></div>
+    </div>
+
+    <div>
+      <!-- Header -->
+      <div class="cert-header">
+        <div class="institution-name">Gentofte Seminarium</div>
+        <div class="cert-title">Afgangsbevis for Pædagoguddannelsen</div>
+      </div>
+
+      <!-- Recipient -->
+      <div class="recipient-info">
+        <span>Uddannelsens praktiske del for</span>
+        <div class="recipient-name">Hans Annfinn Johannesen</div>
+        <span class="recipient-cpr">CPR-nr: 140463-XXXX</span>
+      </div>
+
+      <!-- Practical training -->
+      <section>
+        <h3 class="section-heading">Praktikforløb</h3>
+        <p style="font-size: 13.5px; margin-bottom: 10px;">
+          Hver af uddannelsens 3 praktikker er godkendt og gennemført på følgende institutionstyper:
+        </p>
+
+        <ul class="praktik-list">
+          <li class="praktik-item">
+            <div class="praktik-title">Øvelsespraktik</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Integreret institution, 3-10 år</div>
+            <div style="font-weight: 500; color: #15803d; font-size: 12px; margin-top: 4px;"><i class="fa-solid fa-circle-check"></i> Godkendt og gennemført</div>
+          </li>
+          <li class="praktik-item">
+            <div class="praktik-title">1. lønnede praktik</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Merit</div>
+            <div style="font-weight: 500; color: var(--gold); font-size: 12px; margin-top: 4px;"><i class="fa-solid fa-certificate"></i> Godkendt via meritordning</div>
+          </li>
+          <li class="praktik-item">
+            <div class="praktik-title">2. lønnede praktik</div>
+            <div style="font-size: 13px; color: var(--text-muted);">Merit</div>
+            <div style="font-weight: 500; color: var(--gold); font-size: 12px; margin-top: 4px;"><i class="fa-solid fa-certificate"></i> Godkendt via meritordning</div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Signatures and seal on Page 2 -->
+    <div>
+      <div class="footer-stamp-area">
+        <!-- Date and Location info -->
+        <div style="font-size: 13px; color: var(--navy); display: flex; flex-direction: column; gap: 5px;">
+          <span><strong>Sted:</strong> Hellerup</span>
+          <span><strong>Dato:</strong> 20. januar 2000</span>
+        </div>
+
+        <!-- Red Wax Seal representation -->
+        <div class="wax-seal" title="Gentofte Seminarium Segl">
+          <div class="wax-seal-inner">
+            Gentofte<br>Seminarium<br>Sigillum<br>2000
+          </div>
+        </div>
+
+        <!-- Signature -->
+        <div class="signature-block">
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 16px; color: var(--accent);">Margot Lieberkind</span>
+          <div class="signature-line">
+            Margot Lieberkind
+            <div style="font-size: 11px; font-weight: 400; color: var(--text-muted); margin-top: 2px;">Rektor, Gentofte Seminarium</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-stamp-area" style="justify-content: flex-end; margin-top: 30px; padding-top: 0; border-top: none;">
+        <span style="font-size: 12px; color: var(--text-muted);">Side 2 af 2</span>
+      </div>
+      
+      <div class="cert-footer-text">
+        GENTOFTE SEMINARIUM • HARTMANNSVEJ 22, 2900 HELLERUP
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e293b;       /* Slate 800 */
+      --primary-light: #475569; /* Slate 600 */
+      --accent: #2563eb;        /* Royal Blue */
+      --accent-light: #eff6ff;  /* Light Blue Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --sidebar-bg: #f8fafc;    /* Slate 50 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.5;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* CV Container */
+    .cv-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+    }
+
+    /* Sidebar (Left) */
+    .sidebar {
+      width: 32%;
+      background-color: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      padding: 40px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    /* Main Content (Right) */
+    .main-content {
+      width: 68%;
+      padding: 40px 35px;
+    }
+
+    /* Headings */
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary-light);
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background-color: var(--accent);
+    }
+
+    /* Contact Info */
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+      width: 16px;
+      margin-top: 4px;
+      text-align: center;
+    }
+
+    .contact-item a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent);
+    }
+
+    /* Skills & Badges */
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      background-color: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    /* Languages & Courses */
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .info-list li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed var(--border);
+      padding-bottom: 5px;
+    }
+
+    .info-list li span.label {
+      font-weight: 500;
+      color: var(--primary-light);
+    }
+
+    .info-list li span.value {
+      color: var(--text-muted);
+    }
+
+    .course-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .course-item {
+      display: flex;
+      gap: 10px;
+    }
+
+    .course-year {
+      font-weight: 600;
+      color: var(--accent);
+      min-width: 45px;
+    }
+
+    /* Timeline (Experience) */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      border: 2px solid #ffffff;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .timeline-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .timeline-company {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 13.5px;
+      color: var(--text);
+    }
+
+    /* Profile / Summary */
+    .profile-summary {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: var(--text);
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background-color: var(--primary-light);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .cv-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 1.5cm;
+      }
+      .sidebar {
+        padding: 20px 20px;
+      }
+      .main-content {
+        padding: 20px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print and Navigation Controls (hidden when printing) -->
+  <div class="print-controls">
+    <a href="../job_skabelon.md" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage til Jobmappe</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="cv-container">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <!-- Contact Info Section -->
+      <div>
+        <h3 class="section-title">Kontakt</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <h4>Telefon</h4>
+              <a href="tel:+4528157016">28 15 70 16</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <h4>E-mail</h4>
+              <a href="mailto:hajohannesen@hotmail.com">hajohannesen@hotmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <div>
+              <h4>Adresse</h4>
+              <span>Nøddevang 8<br>2770 Kastrup</span>
+            </div>
+          </li>
+          <li class="contact-item">
+            <i class="fa-solid fa-file-pdf"></i>
+            <div>
+              <h4>Uddannelsesbevis</h4>
+              <a href="../bevis/" target="_blank">Se pædagogbevis <i class="fa-solid fa-up-right-from-square" style="font-size:10px;"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills Section -->
+      <div>
+        <h3 class="section-title">Kompetencer</h3>
+        <div class="badge-list">
+          <span class="badge">Relationer</span>
+          <span class="badge">Vuggestue (0-3 år)</span>
+          <span class="badge">Børnehave (3-6 år)</span>
+          <span class="badge">Leg & bevægelse</span>
+          <span class="badge">Forældresamarbejde</span>
+          <span class="badge">Reflekteret struktur</span>
+          <span class="badge">Pædagogisk ledelse</span>
+          <span class="badge">Specialområdet</span>
+          <span class="badge">Løsningsorienteret</span>
+          <span class="badge">Humoristisk tilgang</span>
+        </div>
+      </div>
+
+      <!-- Languages Section -->
+      <div>
+        <h3 class="section-title">Sprog</h3>
+        <ul class="info-list">
+          <li><span class="label">Dansk</span><span class="value">Modersmål / Flydende</span></li>
+          <li><span class="label">Færøsk</span><span class="value">Flydende</span></li>
+          <li><span class="label">Engelsk</span><span class="value">Forståelse / Tale</span></li>
+        </ul>
+      </div>
+
+      <!-- Uddannelse Section -->
+      <div>
+        <h3 class="section-title">Uddannelse</h3>
+        <ul class="course-list">
+          <li class="course-item">
+            <span class="course-year">2000</span>
+            <div>
+              <h4>Uddannet Pædagog</h4>
+              <span style="font-size: 12px; color: var(--text-muted);">Pædagoguddannelsen (1997-2000)</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Right Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header style="margin-bottom: 25px;">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3 style="color: var(--accent); font-weight: 500; font-size: 18px; margin-top: 5px;">Erfaren Pædagog & Tidligere Souschef</h3>
+      </header>
+
+      <!-- Profile Section -->
+      <section>
+        <h2 class="section-title">Profil</h2>
+        <p class="profile-summary">
+          Nærværende, engageret og fagligt velfunderet pædagog med over 25 års erfaring inden for dagtilbudsområdet (0-6 år) samt specialområdet. Jeg har solid erfaring med både vuggestuer, børnehaver og ledelse (som souschef og leder).
+          <br><br>
+          Mit pædagogiske fokus er at skabe trygge, anerkendende rammer og stærke relationer, der giver det enkelte barn mod på at udforske verden. Jeg vægter et tæt forældresamarbejde og en struktureret, reflekteret hverdag med plads til leg, bevægelse og humor.
+        </p>
+      </section>
+
+      <!-- Experience Section -->
+      <section>
+        <h2 class="section-title">Erhvervserfaring</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagogisk vikar</h4>
+              <span class="timeline-date">2026 – nu</span>
+            </div>
+            <div class="timeline-company">MG-V Vikarbureau</div>
+            <p class="timeline-desc">Alsidigt vikararbejde i forskellige institutioner, med hurtig tilpasning til nye børnegrupper og kollegiale fællesskaber.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog</h4>
+              <span class="timeline-date">2023 – 2025</span>
+            </div>
+            <div class="timeline-company">Børnehaven Rosa, Øresundsvej 131, 2300 København S</div>
+            <p class="timeline-desc">Pædagogisk arbejde med børnehavebørn med fokus på selvhjulpenhed, sprog og sociale relationer i gruppen.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog (Vuggestue)</h4>
+              <span class="timeline-date">2021 – 2023</span>
+            </div>
+            <div class="timeline-company">Nokken, Rundholtsvej 91, 2300 København S</div>
+            <p class="timeline-desc">Omsorg, tryghed og sproglig udvikling for de mindste (0-3 år) samt forældresamarbejde i hverdagen.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog</h4>
+              <span class="timeline-date">2020 – 2021</span>
+            </div>
+            <div class="timeline-company">Valhalla, Hothers Plads, København N</div>
+            <p class="timeline-desc">Pædagogisk praksis i en aktiv hverdag med særligt fokus på bevægelse og tryg struktur.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog (Vuggestue – barselsvikariat)</h4>
+              <span class="timeline-date">2019 – 2020</span>
+            </div>
+            <div class="timeline-company">Grøndalen, Mandelvej 5, København</div>
+            <p class="timeline-desc">Tryghed og nærvær i vuggestuen med vægt på pædagogiske aktiviteter i mindre grupper.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog (Vuggestue)</h4>
+              <span class="timeline-date">2017 – 2019</span>
+            </div>
+            <div class="timeline-company">Krudthuset, Prinsessegade 76, Christianshavn</div>
+            <p class="timeline-desc">Relationelt arbejde i et mangfoldigt og kreativt dagtilbud på Christianshavn.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog (Vuggestue)</h4>
+              <span class="timeline-date">2014 – 2017</span>
+            </div>
+            <div class="timeline-company">Kriblekrable Vuggestue</div>
+            <p class="timeline-desc">Sansemotorisk udvikling, tryghed, nærvær og omsorg for vuggestuebørn.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog (Vuggestue)</h4>
+              <span class="timeline-date">2013 – 2014</span>
+            </div>
+            <div class="timeline-company">Barnagarðurin á Mýrum, Færøerne</div>
+            <p class="timeline-desc">Pædagogisk praksis i færøsk vuggestue.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog</h4>
+              <span class="timeline-date">2010 – 2013</span>
+            </div>
+            <div class="timeline-company">Lindebo (Specialtilbud)</div>
+            <p class="timeline-desc">Relationelt arbejde og pædagogisk støtte til personer med fysisk og psykisk udviklingshæmning.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagogisk vikar</h4>
+              <span class="timeline-date">2009 – 2010</span>
+            </div>
+            <div class="timeline-company">Pædagogisk Vikarbureau</div>
+            <p class="timeline-desc">Vikararbejde på tværs af forskellige institutioner, med fokus på hurtigt relationsarbejde.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Leder</h4>
+              <span class="timeline-date">2007 – 2008</span>
+            </div>
+            <div class="timeline-company">Vildrosen</div>
+            <p class="timeline-desc">Pædagogisk ledelse, administrativt ansvar, personaleledelse og koordinering af den daglige drift.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <h4>Pædagog & Souschef</h4>
+              <span class="timeline-date">2000 – 2007</span>
+            </div>
+            <div class="timeline-company">Vuggestuen Kolibrien</div>
+            <p class="timeline-desc">Pædagogisk praksis, faglig sparring med leder, stedfortræderfunktion samt administrative og ledelsesmæssige opgaver.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Kurser Section -->
+      <section style="margin-top: 30px;">
+        <h2 class="section-title">Kurser & Efteruddannelse</h2>
+        <ul class="course-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <li class="course-item">
+            <span class="course-year">2023</span>
+            <span>Førstehjælpskursus (opdateret)</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2022</span>
+            <span>Brandkursus</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2015</span>
+            <span>Førstehjælpskursus</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2013</span>
+            <span>Narrativ samtale (Appreciative Inquiry)</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">05-06</span>
+            <span>Kursus for potentielle ledere (Kbh.)</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2006</span>
+            <span>Rummelighed & børn m. særlige behov</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2005</span>
+            <span>Handleplanskursus</span>
+          </li>
+          <li class="course-item">
+            <span class="course-year">2003</span>
+            <span>Barnets følelsesmæssige udvikling</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
