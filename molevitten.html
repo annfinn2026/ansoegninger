@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansøgning - Molevitten - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e293b;       /* Slate 800 */
+      --primary-light: #475569; /* Slate 600 */
+      --accent: #2563eb;        /* Royal Blue */
+      --accent-light: #eff6ff;  /* Light Blue Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+      position: relative;
+    }
+
+    /* Header section to match CV */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .header-left h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: var(--primary-light);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .header-right a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metadata Block */
+    .meta-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .meta-left strong {
+      color: var(--primary);
+    }
+
+    .meta-right {
+      text-align: right;
+    }
+
+    /* Letter Content */
+    .subject {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .paragraph-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    .sign-off {
+      margin-top: 40px;
+    }
+
+    .sign-off p {
+      margin-bottom: 5px;
+    }
+
+    /* Attachments Footer */
+    .attachments {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+    }
+
+    .attachments i {
+      color: var(--accent);
+    }
+
+    .attachments a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attachments a:hover {
+      color: var(--accent);
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background-color: var(--primary-light);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print and Navigation Controls (hidden when printing) -->
+  <div class="print-controls">
+    <a href="index.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage til Skabelon</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3>Erfaren Pædagog</h3>
+      </div>
+      <div class="header-right">
+        <span>Nøddevang 8, 2770 Kastrup</span>
+        <span>Tlf: 28 15 70 16</span>
+        <span>E-mail: <a href="mailto:hajohannesen@hotmail.com">hajohannesen@hotmail.com</a></span>
+      </div>
+    </header>
+
+    <!-- Metadata Block -->
+    <div class="meta-block">
+      <div class="meta-left">
+        <span><strong>Modtager:</strong> Børnehuset Molevitten</span>
+        <span><strong>Att:</strong> Leder Bjarne Renè Jensen / Afdelingsleder Maria Vede</span>
+      </div>
+      <div class="meta-right">
+        <span><strong>Dato:</strong> 21. juni 2026</span>
+      </div>
+    </div>
+
+    <!-- Letter Content -->
+    <main>
+      <h2 class="subject">Ansøgning om stilling som vuggestuepædagog</h2>
+
+      <p>
+        Jeg skriver med stor motivation for at søge den ledige stilling som vuggestuepædagog hos jer i Molevitten. Da jeg så jeres opslag, blev jeg med det samme inspireret af jeres rammer i Carlsbergbyen, jeres faglige stuestruktur med tre uddannede pædagoger, samt jeres pædagogiske forankring i Reggio Emilia-traditionen. Jeg vil utrolig gerne bidrage med mit engagement og min erfaring til jeres vuggestueteam.
+      </p>
+
+      <h3 class="paragraph-title">Reggio Emilia og det nysgerrige vuggestueliv</h3>
+      <p>
+        Reggio Emilia-filosofiens syn på barnet som kompetent, nysgerrigt og medskabende af eget liv fylder meget i min pædagogiske tilgang. Jeg brænder for at skabe inspirerende og æstetiske læringsmiljøer, der pirrer vuggestuebørnenes nysgerrighed og lyst til at udforske verden. For mig er det vigtigt, at hverdagen tilrettelægges således, at der er plads til børnenes egne initiativer, og at vi som voksne er lyttende og medundersøgende sammen med dem.
+      </p>
+      <p>
+        Jeg vægter motorisk udvikling og udeliv højt i det daglige arbejde med de mindste. Jeg elsker at tage på ture ud af huset, hvor vi udforsker lokalområdet, og hvor børnene får lov til at bruge deres kroppe og sanser i forskellige miljøer. At skabe strukturerede, men fleksible rammer, der giver tryghed for det enkelte barn i en stor institution, falder mig helt naturligt.
+      </p>
+
+      <h3 class="paragraph-title">Det stærke stuesamarbejde og forældredialogen</h3>
+      <p>
+        I et team bestående af tre pædagoger ser jeg en fantastisk mulighed for høj pædagogisk kvalitet og faglig refleksion. Jeg bidrager til samarbejdet med en struktureret tilgang, en høj stresstærskel og en stor faglig nysgerrighed. Jeg vægter den daglige dialog med forældrene meget højt, da et trygt forældresamarbejde er afgørende for, at det lille barn trives og udvikler sig i vuggestuen.
+      </p>
+      <p>
+        Personligt er jeg nærværende, anerkendende og bringer altid en god portion humor med mig på arbejde. Jeg søger en stilling på 34-37 timer ugentligt og kan starte den 1. september 2026.
+      </p>
+
+      <p>
+        Jeg håber, at min ansøgning har vækket jeres interesse, og jeg ser meget frem til muligheden for at uddybe mine erfaringer ved en personlig samtale eller under et besøg hos jer i Molevitten.
+      </p>
+
+      <!-- Sign Off -->
+      <div class="sign-off">
+        <p>Med venlig hilsen,</p>
+        <br>
+        <p><strong>Hans Annfinn Johannesen</strong></p>
+      </div>
+    </main>
+
+    <!-- Attachments Section -->
+    <footer class="attachments">
+      <span><i class="fa-solid fa-paperclip"></i> <strong>Bilag:</strong></span>
+      <a href="cv/" target="_blank"><i class="fa-solid fa-address-card"></i> Curriculum Vitae (CV)</a>
+      <a href="bevis/" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Pædagog Uddannelsesbevis</a>
+    </footer>
+  </div>
+
+</body>
+</html>
