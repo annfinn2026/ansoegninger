@@ -340,7 +340,7 @@
 
   <!-- Print and Navigation Controls (hidden when printing) -->
   <div class="print-controls">
-    <a href="../index.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage til Ansøgning</a>
+    <a href="../index.html" id="back-link" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage til Ansøgning</a>
     <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
   </div>
 
@@ -529,5 +529,12 @@
     </main>
   </div>
 
+  <script>
+    // Hvis brugeren kommer fra en specifik ansøgning, så lad tilbage-knappen gå derhen
+    const referrer = document.referrer;
+    if (referrer && (referrer.includes('rigspolitiet') || referrer.includes('paedagog') || referrer.includes('rigspolitiets'))) {
+      document.getElementById('back-link').href = referrer;
+    }
+  </script>
 </body>
 </html>
