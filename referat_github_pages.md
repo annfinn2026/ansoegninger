@@ -3,6 +3,7 @@
 Dette dokument opsummerer det arbejde, vi har udført for at flytte din jobmappe væk fra `duckdns.org` og over på en langt mere professionel og stabil platform: **GitHub Pages**.
 
 ---
+**Resume: agy --conversation=bb983996-0a2c-4124-8a19-9c9f25547f40 (or -c)**
 **Resume: agy --conversation=b51029b4-a435-40ad-a815-a0c6f27dd85e (or -c)**
 
 ## 1. Hvad vi har ændret og hvorfor
