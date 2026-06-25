@@ -1,0 +1,11 @@
+# Skjul uorganiserede arbejdsmapper og kladdefiler fra Git
+2025_10_/
+2026/
+P.Bevis s./
+*.odt
+job_application_kp.md
+job_skabelon.md
+
+# OS-specifikke systemfiler
+.DS_Store
+Thumbs.db
