@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobsamtale Forberedelse - Saxoly Børnehus</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #0F464B;       /* HOFOR/Saxoly Dark Teal */
+      --primary-light: #186067; /* Mid Teal */
+      --accent: #2563eb;        /* Royal Blue */
+      --accent-light: #eff6ff;  /* Light Blue Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --success-text: #166534;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde68a;
+      --warning-text: #92400e;
+      --info-bg: #f0f9ff;
+      --info-border: #bae6fd;
+      --info-text: #075985;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+      position: relative;
+    }
+
+    /* Header section */
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    header h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Subtitle and meta */
+    .meta-info {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 15px;
+      border-left: 4px solid var(--primary);
+      padding-left: 12px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    ul, ol {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      font-size: 14.5px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    /* Alert boxes */
+    .alert {
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      border-left: 4px solid;
+    }
+
+    .alert-tip {
+      background-color: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success-text);
+      border-left-color: #22c55e;
+    }
+
+    .alert-important {
+      background-color: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning-text);
+      border-left-color: #f59e0b;
+    }
+
+    .alert-note {
+      background-color: var(--info-bg);
+      border-color: var(--info-border);
+      color: var(--info-text);
+      border-left-color: #0ea5e9;
+    }
+
+    .alert-title {
+      font-weight: 700;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Cases block */
+    .case-card {
+      background-color: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .case-title {
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .case-answer {
+      background-color: #ffffff;
+      border-left: 3px solid var(--primary-light);
+      padding: 12px 15px;
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 15px 0;
+      }
+      .page-container {
+        padding: 30px 20px;
+        border-radius: 0;
+      }
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      tr {
+        border: 1px solid var(--border);
+        margin-bottom: 15px;
+        border-radius: 6px;
+        background-color: #f8fafc;
+      }
+      td {
+        border: none;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+      td:last-child {
+        border-bottom: none;
+      }
+      td:before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      td:nth-of-type(1):before { content: "Saxolys fokus"; }
+      td:nth-of-type(2):before { content: "Din profil"; }
+      td:nth-of-type(3):before { content: "Samtale-fokus"; }
+      td {
+        padding-left: 15px;
+        padding-top: 35px;
+      }
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Controls -->
+  <div class="print-controls">
+    <a href="../index.html" class="btn"><i class="fa-solid fa-arrow-left"></i> Tilbage til ansøgning</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <header>
+      <h1>Forberedelse til Jobsamtale</h1>
+      <h3>Saxoly Børnehus — Vuggestuepædagog</h3>
+      <div class="meta-info">
+        <span>Kandidat: Hans Annfinn Johannesen</span>
+      </div>
+    </header>
+
+    <!-- Nøgletal -->
+    <section>
+      <h2>📌 Nøgletal og Fakta om Saxoly Børnehus</h2>
+      <ul>
+        <li><strong>Type:</strong> Selvejende integreret institution (del af den selvejende klynge Saxoly).</li>
+        <li><strong>Beliggenhed:</strong> Vesterbro (Saxogade 61 og Sønder Boulevard 45).</li>
+        <li><strong>Størrelse:</strong> 140 børn i alt (60 vuggestuebørn og 80 børnehavebørn).</li>
+        <li><strong>Personale:</strong> Ca. 35 medarbejdere.</li>
+        <li><strong>Vuggestuens struktur:</strong> 5 stuer opdelt i 2 teams. På hver stue er der 2 pædagoger og 1 medhjælper + 1 fast eftermiddagsflyver.</li>
+        <li><strong>Pædagogisk leder:</strong> Ditte Andersen (Tlf: 20198981, e-mail: dittan@kk.dk). De holder åbent hus den 1. tirsdag i måneden kl. 10.00 i Saxogade 61, stuen.</li>
+      </ul>
+    </section>
+
+    <!-- Værdigrundlag -->
+    <section>
+      <h2>💎 Værdier og Faglig Kontekst</h2>
+      <div class="alert alert-note">
+        <div class="alert-title"><i class="fa-solid fa-circle-info"></i> Basale behov vs. Den Faglige Kontekst</div>
+        <strong>Basale behov:</strong> Begreber som <em>hjerterum</em>, <em>tryghed</em> og <em>omsorg</em> beskriver barnets basale fysiologiske og emotionelle behov. De er fundamentet for trivsel, men udgør ikke den pædagogiske faglighed i sig selv.<br>
+        <strong>Den faglige kontekst:</strong> Fagligheden udfolder sig i det bevidste <strong>relationsarbejde</strong> og understøttelsen af barnets <strong>relationsdannelse</strong>. Det er her, du som pædagog arbejder professionelt i barnets <strong>Nærmeste Udviklingszone (NUZ)</strong> gennem struktureret <strong>stilladsering</strong> (scaffolding), så barnet gradvist mestrer nye sociale, sproglige og motoriske færdigheder.
+      </div>
+
+      <div class="alert alert-important">
+        <div class="alert-title"><i class="fa-solid fa-triangle-exclamation"></i> Kritisk refleksion: "Rustning til livet" vs. Det kompetente barn</div>
+        På Saxolys hjemmeside nævnes <em>rustning til livet</em> som en værdi. Her kan du markere dig stærkt ved at bringe et moderne, ressourceorienteret barnesyn på banen:<br>
+        - <strong>Kritik af "rustning":</strong> Metaforen om en <em>rustning</em> kan antyde et defensivt barnesyn – at verden er en trussel, og at barnet skal "pansres" eller beskyttes af de voksne for at modstå livet.<br>
+        - <strong>Det kompetente barn:</strong> I moderne pædagogik ser vi barnet som <strong>kompetent</strong>, aktivt og medskabende af sit eget liv fra fødslen. Målet er ikke at give barnet en beskyttende rustning på, men derimod at understøtte barnets iboende ressourcer, selvværd og <strong>handlekraft (agency)</strong>, så det kan navigere i verden i samspil med andre.
+      </div>
+    </section>
+
+    <!-- Match Tabel -->
+    <section>
+      <h2>🤝 Match: Hvad de søger vs. Hvad du tilbyder</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Saxolys fokus</th>
+            <th>Din profil (fra ansøgningen)</th>
+            <th>Samtale-fokus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pædagogiske måltider & Selvhjulpenhed</strong><br>- Servering i klare glasskåle.<br>- Børnene hælder selv op fra små kander, smører brød.<br>- Personalet spiser med (det pædagogiske måltid).</td>
+            <td>Vægter selvhjulpenhed og mindre grupper med afsæt i børnenes aktuelle kunnen (udgangspunkt for NUZ).</td>
+            <td>Forklar, hvordan du stilladserer vuggestuebørnenes motorik (hælde, øse op) og skaber et hyggeligt, læringsrigt måltidsmiljø.</td>
+          </tr>
+          <tr>
+            <td><strong>Søvnpolitik (Tryghed & Biologiske ur)</strong><br>- Vækkes ikke kl. 12-14.<br>- Ude i krybber med seler (0-2 år) / uden seler på gulvet (2-3 år).<br>- Indendørs madrasser på de stuer, der ligger langt fra liggehallen.</td>
+            <td>Trives med velplanlagt, fagligt reflekteret struktur og har erfaring med forældresparring om søvn.</td>
+            <td>Vis opbakning til barnets biologiske søvnbehov. Fortæl, at du er fortrolig med både liggehalsrutiner (seler) og indendørs madrasputning.</td>
+          </tr>
+          <tr>
+            <td><strong>Natur og Hareskoven</strong><br>- Stor grund i Værløse med to skurvogne, bålplads og rigtig skov.<br>- Minibussen <em>Blåhvalen</em> kører børnehavebørnene derop.</td>
+            <td>Stort fokus på at skabe rum og mulighed for barnets leg, krop og bevægelse.</td>
+            <td>Nævn din passion for motorik og sanser i naturen. Spørg ind til, hvordan vuggestuen inddrages i udelivet (udadreagerende ture).</td>
+          </tr>
+          <tr>
+            <td><strong>Sprogindsats</strong><br>- Fokus på dialogisk læsning, sprogtrappen og at sætte ord på hverdagen.</td>
+            <td>Er omhyggelig i din kommunikation og omsætter teori til praksis.</td>
+            <td>Forklar, hvordan du konstant "sætter ord på" hverdagens handlinger (puslebord, leg) for at stimulere sproget naturligt.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cases -->
+    <section>
+      <h2>🛠️ Praktiske Cases og Svarstrategier</h2>
+
+      <div class="case-card">
+        <div class="case-title">Case A: Relationsarbejde og det kompetente barn</div>
+        <p><strong>Spørgsmål:</strong> <em>Hvordan adskiller du omsorg fra professionelt relationsarbejde, og hvordan forholder du dig til værdien om at "ruste barnet til livet"?</em></p>
+        <div class="case-answer">
+          "Tryghed, omsorg og hjerterum er vuggestuebarnets basale behov – det er fundamentet. Min faglige opgave som pædagog er at gå et skridt videre og arbejde systematisk med barnets relationsdannelse i mindre grupper, hvor jeg støtter børnene i at aflæse hinanden og indgå i fællesskaber.<br><br>
+          Angående værdien 'rustning til livet', reflekterer jeg over metaforen. For mig handler det ikke om at lægge en beskyttende rustning på barnet for at modstå verden. Jeg arbejder ud fra et moderne barnesyn, hvor barnet ses som kompetent fra fødslen. Min opgave er at understøtte barnets iboende handlekraft (agency) og selvværd, så dets styrke vokser indefra i stedet for at blive lagt på dem som et ydre panser."
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-title">Case B: Selvhjulpenhed og pædagogisk stilladsering i NUZ</div>
+        <p><strong>Spørgsmål:</strong> <em>Hvordan understøtter du i praksis, at en 1,5-årig hælder vand op selv, uden at måltidet ender i stress og kaos?</em></p>
+        <div class="case-answer">
+          "Måltidet er et ideelt rum til at arbejde med barnets Nærmeste Udviklingszone (NUZ). Hvis en 1,5-årig skal lære at hælde vand op, stilladserer jeg handlingen. Barnet kan holde kanden, men ikke styre balancen alene. Jeg lægger min hånd roligt over barnets hånd og styrer kanden sammen med barnet, mens jeg sætter ord på: 'Nu tipper vi kanden... plup-plup-plup... der løber vandet. Stop.'<br><br>
+          Efterhånden som barnet mestrer teknikken, trækker jeg min hånd tilbage (af-stilladsering). Spild gør vi ikke til et problem; barnet hjælper selv med at tørre op med en klud. Det opbygger stolthed, motorik og selvstændighed i et trygt tempo."
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-title">Case C: Søvnpolitik og forældresamarbejde under pres</div>
+        <p><strong>Spørgsmål:</strong> <em>En forælder beder dig indtrængende om at vække barnet efter 45 minutters lur, fordi det ikke vil sove om aftenen derhjemme. Hvad gør du?</em></p>
+        <div class="case-answer">
+          "Jeg vil lytte anerkendende til forældrenes frustration. Derefter vil jeg venligt, men fagligt argumentere for vores søvnpolitik:<br><br>
+          'I Saxoly vækker vi som udgangspunkt ikke børnene, da den sammenhængende dybe søvn er afgørende for opbygningen af krop og intellekt. Hvis vi afbryder den, risikerer vi at få et overtræt barn om eftermiddagen, som faktisk har endnu sværere ved at falde i søvn om aftenen.'<br><br>
+          Jeg vil tilbyde at registrere barnets søvnmønster og trivsel i en uge, og sparre med dem om aftenrutinerne derhjemme (f.eks. overgang til egen seng, skærmtid osv.) for at løse problemets kerne i fællesskab."
+        </div>
+      </div>
+    </section>
+
+    <!-- Spørgsmål til dem -->
+    <section>
+      <h2>🙋‍♂️ Spørgsmål, DU kan stille til samtalen</h2>
+      <ol>
+        <li><em>"Jeg læste med stor interesse jeres kostpolitik, særligt at I serverer maden opdelt i klare glasskåle. Hvordan oplever I, at det påvirker vuggestuebørnenes madmod og lyst til at smage på nye ting?"</em></li>
+        <li><em>"Jeg kan se, at minibussen 'Blåhvalen' kører børnehavebørnene i Hareskoven. Hvordan inddrager I vuggestuen i udelivet og turen til hytten i Værløse? Kører I derop på andre måder, eller er der særlige udedage for vuggestuebørnene?"</em></li>
+        <li><em>"I jeres retningslinjer for søvn står der, at de 2-3 årige sover i krybber, der stilles på gulvet uden seler. Hvordan fungerer den overgang i praksis på stuen for at sikre ro under middagsluren?"</em></li>
+        <li><em>"På jeres hjemmeside nævner I 'rustning til livet' som en personaledefineret værdi. Hvordan balancerer I det i hverdagen med det moderne syn på barnet som kompetent og medskabende af sit eget liv? Er det noget, I drøfter i personalegruppen?"</em></li>
+      </ol>
+    </section>
+  </div>
+
+</body>
+</html>
