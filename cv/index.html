@@ -523,10 +523,25 @@
   </div>
 
   <script>
-    // Hvis brugeren kommer fra en specifik ansøgning, så lad tilbage-knappen gå derhen
-    const referrer = document.referrer;
-    if (referrer && (referrer.includes('rigspolitiet') || referrer.includes('paedagog') || referrer.includes('rigspolitiets'))) {
-      document.getElementById('back-link').href = referrer;
+    // Hvis brugeren kommer fra en specifik ansøgning (via URL-parameter eller referrer), så lad tilbage-knappen gå derhen
+    const urlParams = new URLSearchParams(window.location.search);
+    const fromParam = urlParams.get('from');
+    
+    if (fromParam) {
+      if (fromParam === 'e-boks') {
+        document.getElementById('back-link').href = '../e-boks/index.html';
+      } else if (fromParam === 'rigspolitiet') {
+        document.getElementById('back-link').href = '../rigspolitiet/index.html';
+      } else if (fromParam === 'andersen-biler') {
+        document.getElementById('back-link').href = '../andersen-biler/index.html';
+      } else if (fromParam === 'hofor') {
+        document.getElementById('back-link').href = '../index.html';
+      }
+    } else {
+      const referrer = document.referrer;
+      if (referrer && (referrer.includes('rigspolitiet') || referrer.includes('paedagog') || referrer.includes('rigspolitiets') || referrer.includes('e-boks') || referrer.includes('andersen-biler') || referrer.includes('index.html'))) {
+        document.getElementById('back-link').href = referrer;
+      }
     }
   </script>
 </body>
