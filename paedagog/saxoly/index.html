@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansøgning - Saxoly Børnehus - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #1e293b;       /* Slate 800 */
+      --primary-light: #475569; /* Slate 600 */
+      --accent: #2563eb;        /* Royal Blue */
+      --accent-light: #eff6ff;  /* Light Blue Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+      position: relative;
+    }
+
+    /* Header section to match CV */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .header-left h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: var(--primary-light);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .header-right a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metadata Block */
+    .meta-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .meta-left strong {
+      color: var(--primary);
+    }
+
+    .meta-right {
+      text-align: right;
+    }
+
+    /* Letter Content */
+    .subject {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .paragraph-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    .sign-off {
+      margin-top: 40px;
+    }
+
+    .sign-off p {
+      margin-bottom: 5px;
+    }
+
+    /* Attachments Footer */
+    .attachments {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+    }
+
+    .attachments i {
+      color: var(--accent);
+    }
+
+    .attachments a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attachments a:hover {
+      color: var(--accent);
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+      background-color: var(--primary-light);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--primary);
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Controls (hidden when printing) -->
+  <div class="print-controls">
+    <div></div>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3>Erfaren Pædagog</h3>
+      </div>
+      <div class="header-right">
+        <span>Nøddevang 8, 2770 Kastrup</span>
+        <span>Tlf: 28 15 70 16</span>
+        <span>E-mail: <a href="mailto:hajohannesen@hotmail.com">hajohannesen@hotmail.com</a></span>
+      </div>
+    </header>
+
+    <!-- Metadata Block -->
+    <div class="meta-block">
+      <div class="meta-left">
+        <span><strong>Modtager:</strong> Saxoly Børnehus</span>
+        <span><strong>Att:</strong> Pædagogisk leder Ditte Andersen</span>
+      </div>
+      <div class="meta-right">
+        <span><strong>Dato:</strong> 22. juni 2026</span>
+      </div>
+    </div>
+
+    <!-- Letter Content -->
+    <main>
+      <h2 class="subject">Ansøgning om stilling som vuggestuepædagog</h2>
+
+      <p>
+        En væsentlig årsag til, at jeg søger stillingen, er, at jeg er en passioneret pædagog, som har arbejdet med aldersgruppen gennem mange år. Jeg synes det lyder spændende, at I har fokus på langsom pædagogik – som et fagligt ståsted.
+      </p>
+
+      <h3 class="paragraph-title">Relationsarbejde og langsom pædagogik</h3>
+      <p>
+        Mit fokus er i særdeleshed at skabe udviklende og tætte relationer til og mellem børnene, for herigennem at give børnene lysten og modet til i trygge omgivelser at udforske og tilegne sig verden.
+      </p>
+      <p>
+        Jeg kan lide at arbejde i mindre grupper med afsæt i børnenes aktuelle kunnen og formåen. Jeg har gennem min praksis altid haft stort fokus på at skabe rum og mulighed for barnets leg og bevægelse og kan derfor byde ind med stor erfaring på dette område.
+      </p>
+
+      <h3 class="paragraph-title">Forældresamarbejde og pædagogisk praksis</h3>
+      <p>
+        I min dialog med forældre er jeg lyttende og nærværende og finder det vigtigt, at der i det daglige tales om de gode oplevelser såvel som de ting, der kan opleves udfordrende for barnet. Jeg er gennem mine tidligere jobs vant til at råde og vejlede forældre omkring det lille barns udvikling og kan vældig godt lide denne del af arbejdet.
+      </p>
+      <p>
+        I min pædagogiske praksis lægger jeg vægt på at møde kollegaer, børn og forældre ligeværdigt, anerkendende og med respekt for netop deres ståsted i verden. Jeg trives med mangfoldighed og et nuanceret blik på de forskelligheder, som der er i børns opvækstvilkår.
+      </p>
+      <p>
+        Jeg trives med en velplanlagt og faglig reflekteret struktur, som skal sikre de bedste rammer for barnet og institutionens pædagogik. Jeg sætter stor pris på, når fagligheden er i højsæde, og de fælles drøftelser og refleksioner i personalegruppen danner afsæt for den pædagogiske praksis. Jeg er god til at finde løsninger på mange forskellige niveauer i det pædagogiske arbejde, og jeg går gerne ”nye” veje, hvis omstændighederne kræver det.
+      </p>
+
+      <h3 class="paragraph-title">Faglige og personlige kvalifikationer</h3>
+      <p>
+        Af faglige kvalifikationer kan jeg nævne, at jeg har en høj stresstærskel, at jeg er omhyggelig i min kommunikation, og at jeg har gode analytiske evner og formår at være handlingsanvisende i forhold to relevant pædagogisk praksis. Som menneske er jeg nærværende og engageret i mine omgivelser, og jeg trives med en humoristisk tilgang til (arbejds)livet.
+      </p>
+
+      <p>
+        Jeg håber, at det ovenstående har vakt jeres interesse, og jeg kommer gerne til en uddybende samtale.
+      </p>
+
+      <!-- Sign Off -->
+      <div class="sign-off">
+        <p>Med venlig hilsen,</p>
+        <br>
+        <p><strong>Hans Annfinn Johannesen</strong></p>
+      </div>
+    </main>
+
+    <!-- Attachments Section -->
+    <footer class="attachments">
+      <span><i class="fa-solid fa-paperclip"></i> <strong>Bilag:</strong></span>
+      <a href="../cv/index.html" target="_blank"><i class="fa-solid fa-address-card"></i> Curriculum Vitae (CV)</a>
+      <a href="../../bevis/index.html" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Pædagog Uddannelsesbevis</a>
+    </footer>
+  </div>
+
+</body>
+</html>
