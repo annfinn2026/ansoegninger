@@ -45,6 +45,8 @@ Efter du har aktiveret GitHub Pages, er dine dokumenter tilgængelige på følge
   [https://annfinn2026.github.io/ansoegninger/gocollective/](https://annfinn2026.github.io/ansoegninger/gocollective/)
 * **Ansøgning (Randstad):**  
   [https://annfinn2026.github.io/ansoegninger/randstad/](https://annfinn2026.github.io/ansoegninger/randstad/)
+* **Ansøgning (All Recruit):**  
+  [https://annfinn2026.github.io/ansoegninger/allrecruit/](https://annfinn2026.github.io/ansoegninger/allrecruit/)
 * **Dit IT-CV:**  
   [https://annfinn2026.github.io/ansoegninger/cv/](https://annfinn2026.github.io/ansoegninger/cv/)
 

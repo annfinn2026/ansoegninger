@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansøgning - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #0F172A;       /* Dark Slate */
+      --primary-light: #EA580C; /* All Recruit Orange */
+      --accent: #EA580C;        /* Orange Accent */
+      --accent-light: #fff7ed;  /* Very Light Orange Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+      position: relative;
+    }
+
+    /* Header section */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 5px;
+    }
+
+    .header-left h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .header-right a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+      color: var(--primary);
+    }
+
+    /* Metadata Block */
+    .meta-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .meta-left strong {
+      color: var(--primary);
+    }
+
+    .meta-right {
+      text-align: right;
+    }
+
+    /* Letter Content */
+    .subject {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .paragraph-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    .sign-off {
+      margin-top: 40px;
+    }
+
+    .sign-off p {
+      margin-bottom: 5px;
+    }
+
+    /* Attachments Footer */
+    .attachments {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+    }
+
+    .attachments i {
+      color: var(--primary);
+    }
+
+    .attachments a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attachments a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-light);
+    }
+
+    .btn-secondary {
+      background-color: #64748b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print and Navigation Controls (hidden when printing) -->
+  <div class="print-controls">
+    <a href="../cv/index.html?from=allrecruit" class="btn btn-secondary"><i class="fa-solid fa-address-card"></i> Vis mit IT-CV</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3>IT-supporter & Formidler</h3>
+      </div>
+      <div class="header-right">
+        <span>Nøddevang 8, 2770 Kastrup</span>
+        <span>Tlf: 28 15 70 16</span>
+        <span>E-mail: <a href="mailto:johannesen@keemail.me">johannesen@keemail.me</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/hans-a-johannesen-b27127419/" target="_blank">Profil</a></span>
+      </div>
+    </header>
+
+    <!-- Metadata Block -->
+    <div class="meta-block">
+      <div class="meta-left">
+        <span><strong>Modtager:</strong> All Recruit (for international fond)</span>
+        <span><strong>Att:</strong> Nicklas Johansen, Salgs- og marketingchef / Ansættelsesudvalg</span>
+        <span>Vibeholms Allé 25, 2650 Brøndby</span>
+      </div>
+      <div class="meta-right">
+        <span><strong>Dato:</strong> 5. juli 2026</span>
+      </div>
+    </div>
+
+    <!-- Letter Content -->
+    <main>
+      <h2 class="subject">Ansøgning om stilling som IT-supporter i Storkøbenhavn (Ref-ID: 28604)</h2>
+
+      <p>
+        Med stor interesse og motivation søger jeg den ledige stilling som IT-supporter hos jeres kunde, en international fond med kontor i Storkøbenhavn. Da jeg læste opslaget, følte jeg med det samme, at min profil matchede jeres ønsker: I søger en udadvendt, proaktiv teamplayer, der kan lide at yde en fremragende service og it-support med kvaliteten i højsæde. Jeg brænder for at forene min store tekniske nysgerrighed med en nærværende, anerkendende og yderst tålmodig brugervejledning, hvor alle mødes med et smil – også i pressede situationer.
+      </p>
+
+      <h3 class="paragraph-title">Dobbeltkompetence: Menneskelig forståelse og teknisk indsigt</h3>
+      <p>
+        Jeg bringer en stærk dobbeltkompetence i spil, hvor min tekniske nysgerrighed og erfaring går hånd i hånd med min stærke formidlingsevne og menneskelige forståelse. Min profil adskiller sig fra den traditionelle IT-supporters, da jeg medbringer 25 års erfaring som uddannet pædagog, souschef og leder i dagtilbud. Dette ser jeg som en af mine absolut største styrker i rollen som it-supporter. Jeg ved af erfaring, at IT-udfordringer i en travl hverdag hurtigt kan skabe frustrationer for medarbejderne. Gennem min baggrund har jeg oparbejdet en meget høj stresstærskel, stærke relationskompetencer og en medfødt tålmodighed. Jeg formår at deeskalere eventuelle frustrationer og bevare roen under pres, så brugerne føler sig hørt, forstået og hjulpet hurtigt videre.
+      </p>
+
+      <h3 class="paragraph-title">Solid praktisk IT-erfaring og systemforståelse</h3>
+      <p>
+        Ved siden af mit pædagogiske virke har jeg i mange år fungeret som IT-ansvarlig i mine institutioner, hvor jeg har haft ansvaret for opsætning, drift og fejlfinding af hardware (pc'er, iPhones, tablets, printere) og lokale netværk samt vejledning af mine kolleger. For at styrke min profil yderligere har jeg i 2026 gennemført en fire ugers erhvervspraktik hos Koncern IT (KIT) i Københavns Kommune. Her fik jeg solid praktisk erfaring med professionelle supportværktøjer, herunder sagsbehandling og incident management i <strong>ServiceNow</strong>, fejlfinding via Helpdesktool samt udrulning og administration af endpoints via <strong>Microsoft Intune</strong>. Jeg har et godt kendskab til administration af brugerrettigheder i Active Directory og Entra ID samt generel support af Windows 11 og iOS-enheder.
+      </p>
+
+      <h3 class="paragraph-title">Bred support, mødeassistance og proaktiv service</h3>
+      <p>
+        Jeg motiveres af stillingens alsidighed, der spænder fra daglig support og brugeradministration til hardware/softwareinstallation, IT-onboarding af nye medarbejdere samt assistance ved store møder (Zoom, Webex og Teams). Jeg arbejder yderst struktureret, går op i kvaliteten af mit arbejde og følger altid mine sager helt i mål. Som person er jeg udadvendt, trives i et dynamisk arbejdsmiljø og bidrager aktivt til teamworket. Da jeg taler og skriver både dansk og engelsk på et højt niveau, vil jeg ubesværet kunne yde support og udarbejde dokumentation i et internationalt miljø.
+      </p>
+
+      <h3 class="paragraph-title">Teknisk nysgerrighed og kontinuerlig læring</h3>
+      <p>
+        Min store interesse for it rækker også ind i min fritid, hvor jeg driver mit eget homelab. Her udforsker jeg teknologier som Proxmox-virtualisering, Docker-containere, VPN-opsætning (Wireguard) samt OPNsense firewalls og netværkssikkerhed. Jeg har en naturligt logisk og undersøgende tilgang til fejlfinding, lærer hurtigt nye systemer at kende og har et stort ønske om kontinuerlig faglig udvikling.
+      </p>
+
+      <p>
+        Jeg håber, at min ansøgning har vakt jeres interesse, og jeg ser meget frem til muligheden for at uddybe min motivation og mine kompetencer ved en personlig samtale.
+      </p>
+
+      <!-- Sign Off -->
+      <div class="sign-off">
+        <p>Med venlig hilsen,</p>
+        <br>
+        <p><strong>Hans Annfinn Johannesen</strong></p>
+      </div>
+    </main>
+
+    <!-- Attachments Section -->
+    <footer class="attachments">
+      <span><i class="fa-solid fa-paperclip"></i> <strong>Bilag:</strong></span>
+      <a href="../cv/index.html?from=allrecruit" target="_blank"><i class="fa-solid fa-address-card"></i> Curriculum Vitae (CV)</a>
+      <a href="foelgebrev.md" target="_blank"><i class="fa-solid fa-file-signature"></i> Følgebrev (Markdown)</a>
+      <a href="foelgebrev.txt" target="_blank"><i class="fa-solid fa-file-lines"></i> Følgebrev (Ren tekst)</a>
+    </footer>
+  </div>
+
+</body>
+</html>
