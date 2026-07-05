@@ -41,6 +41,8 @@ Efter du har aktiveret GitHub Pages, er dine dokumenter tilgængelige på følge
 ### IT-Job Links
 * **Hovedansøgning (HOFOR):**  
   [https://annfinn2026.github.io/ansoegninger/](https://annfinn2026.github.io/ansoegninger/)
+* **Ansøgning (GoCollective):**  
+  [https://annfinn2026.github.io/ansoegninger/gocollective/](https://annfinn2026.github.io/ansoegninger/gocollective/)
 * **Dit IT-CV:**  
   [https://annfinn2026.github.io/ansoegninger/cv/](https://annfinn2026.github.io/ansoegninger/cv/)
 
