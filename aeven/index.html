@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansøgning - IT Onsite Supporter - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #004B49;       /* Deep Teal / Aeven Corporate Dark */
+      --primary-light: #007A78; /* Mid Teal */
+      --accent: #2563eb;        /* Accent Blue */
+      --accent-light: #f0fdfa;  /* Teal Soft Bg */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f1f5f9;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .header-left h3 {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--primary-light);
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .header-right a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metadata Block */
+    .meta-block {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--accent-light);
+      border-left: 4px solid var(--primary);
+      padding: 15px 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-right {
+      text-align: right;
+      color: var(--text-muted);
+    }
+
+    /* Content Styling */
+    .subject {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .paragraph-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    .sign-off {
+      margin-top: 40px;
+    }
+
+    .sign-off p {
+      margin-bottom: 5px;
+    }
+
+    /* Attachments Footer */
+    .attachments {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+    }
+
+    .attachments i {
+      color: var(--primary);
+    }
+
+    .attachments a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attachments a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-light);
+    }
+
+    .btn-secondary {
+      background-color: #64748b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print and Navigation Controls (hidden when printing) -->
+  <div class="print-controls">
+    <a href="../cv/index.html" class="btn btn-secondary"><i class="fa-solid fa-address-card"></i> Vis mit IT-CV</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3>IT-supporter & Formidler</h3>
+      </div>
+      <div class="header-right">
+        <span>Nøddevang 8, 2770 Kastrup</span>
+        <span>Tlf: 28 15 70 16</span>
+        <span>E-mail: <a href="mailto:johannesen@keemail.me">johannesen@keemail.me</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/hans-a-johannesen-b27127419/" target="_blank">Profil</a></span>
+      </div>
+    </header>
+
+    <!-- Metadata Block -->
+    <div class="meta-block">
+      <div class="meta-left">
+        <span><strong>Modtager:</strong> Aeven</span>
+        <span><strong>Kunde / Lokation:</strong> Novo Nordisk Foundation A/S</span>
+        <span><strong>Att:</strong> Rekrutteringsteamet / Support Manager</span>
+      </div>
+      <div class="meta-right">
+        <span><strong>Dato:</strong> 23. juli 2026</span>
+      </div>
+    </div>
+
+    <!-- Letter Content -->
+    <main>
+      <h2 class="subject">Ansøgning om stilling som IT Onsite Supporter (Novo Nordisk Foundation A/S)</h2>
+
+      <p>
+        Med stor gejst og motivation søger jeg stillingen som IT Onsite Supporter hos Aeven med daglig gang hos Novo Nordisk Foundation A/S. Da jeg læste jeres opslag, var min første tanke, at her er det perfekte match: I søger en udadvendt, serviceorienteret og strukturerede supporter, der kan levere nærværende support i hverdagen – fra den daglige håndtering af incidents og brugeradministration til IT-onboarding af nye medarbejdere samt teknisk assistance ved store møder.
+      </p>
+
+      <h3 class="paragraph-title">Nærværende IT-support og pædagogisk ro i øjenhøjde</h3>
+      <p>
+        Min profil adskiller sig positivt ved, at jeg kombinerer tekniske færdigheder med 25 års erfaring som pædagog, souschef og leder. For mig handler IT-support i et professionelt miljø som Novo Nordisk Foundation ikke kun om at løse en billet i systemet, men i høj grad om at møde brugeren med et "smil i stemmen" og skabe tryghed. Hvad enten det drejer sig om en ny medarbejder, der skal have en god IT-introduktion, eller en bruger med akut modgang på sit udstyr midt i en travl arbejdsdag, formår jeg at bevare roen, lytte aktivt og formidle løsninger pædagogisk og forståeligt på både dansk og engelsk.
+      </p>
+
+      <h3 class="paragraph-title">Teknisk erfaring: Windows 11, iOS, Microsoft 365 & Brugeradministration</h3>
+      <p>
+        Sideløbende med min erhvervskarriere har jeg i mange år varetaget rollen som IT-ansvarlig i mine institutioner med ansvar for udstyrsfejlsøgning, netværk og brugervejledning. For nylig har jeg gennemført en fire ugers erhvervspraktik i Koncern IT (KIT) i Københavns Kommune, hvor jeg opnåede praktisk erfaring med sagsbehandling i <strong>ServiceNow</strong>, administration af endpoints via <strong>MS Intune</strong> samt bruger- og rettighedsstyring i Active Directory og Entra ID. Jeg arbejder ubesværet i Windows 11, iOS, Office 365, SharePoint og Teams, og jeg tager hurtigt og struktureret ejerskab over installation, klargøring og håndtering af udstyr og software.
+      </p>
+
+      <h3 class="paragraph-title">Møde-assistance, onboarding og procesdokumentation</h3>
+      <p>
+        Stillingens opgaver med IT-assistance ved store møder (Zoom, Webex, Teams) passer særdeles godt til min strukturerede tilgang. Jeg vægter høj forberedelse forud for arrangementer, sikrer at AV-udstyr og skærmdeling fungerer fejlfrit, og agerer den rolige, hjælpsomme hånd i rummet under afviklingen. Derudover motiveres jeg af at dokumentere viden og arbejdsgange, så opgaveløsningen i teamet forbliver strømlinet og genkendelig for alle medarbejdere.
+      </p>
+
+      <h3 class="paragraph-title">Teknisk nysgerrighed og fritidslab</h3>
+      <p>
+        Min IT-passion fortsætter i min fritid, hvor jeg driver eget hjemmelaboratorium (Proxmox-virtualisering, Docker-containers, Wireguard VPN, pfSense/OPNsense firewalls og netværksløsninger). Det giver mig en dyb teknisk forståelse og en stor læringsvillighed, som gør, at jeg hurtigt sætter mig ind i Aevens og Novo Nordisk Foundations specifikke systemer og arbejdsprocesser.
+      </p>
+
+      <p>
+        Jeg håber, at min ansøgning har vakt jeres interesse, og jeg ser meget frem til muligheden for at uddybe min motivation og kompetencer ved en personlig samtale.
+      </p>
+
+      <!-- Sign Off -->
+      <div class="sign-off">
+        <p>Med venlig hilsen,</p>
+        <br>
+        <p><strong>Hans Annfinn Johannesen</strong></p>
+      </div>
+    </main>
+
+    <!-- Attachments Section -->
+    <footer class="attachments">
+      <span><i class="fa-solid fa-paperclip"></i> <strong>Bilag:</strong></span>
+      <a href="../cv/index.html?from=aeven" target="_blank"><i class="fa-solid fa-address-card"></i> Curriculum Vitae (CV)</a>
+    </footer>
+  </div>
+
+</body>
+</html>
