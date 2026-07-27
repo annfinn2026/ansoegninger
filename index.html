@@ -521,11 +521,37 @@
             <div class="project-card">
               <div>
                 <h4><i class="fa-solid fa-cubes" style="color: #E57000;"></i> Proxmox VE Hypervisor</h4>
-                <p>Private virtualiseringsmiljø opsat med LXC containers, virtualiserede Linux/Windows noder, ZFS storage og backup-rutiner.</p>
+                <p>Private virtualiseringsmiljø opsat på Intel Xeon server m. LXC containers, virtualiserede noder, automatiserede update-scripts og backup-rutiner.</p>
                 <div class="tag-list">
                   <span class="tag">Proxmox VE</span>
-                  <span class="tag">LXC</span>
-                  <span class="tag">ZFS Storage</span>
+                  <span class="tag">LXC Containers</span>
+                  <span class="tag">Intel Xeon</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4><i class="fa-solid fa-database" style="color: #00599C;"></i> ZFS Storage Pools & LVM-Thin</h4>
+                <p>Storage-konfiguration m. ZFS pools, LVM-thin storage pools (`storage-1tb`, `local-lvm`), dataset-kvoter, ZFS snapshots og dataintegritet.</p>
+                <div class="tag-list">
+                  <span class="tag blue">ZFS Pool</span>
+                  <span class="tag">LVM-Thin</span>
+                  <span class="tag">Proxmox Storage</span>
+                  <span class="tag">Snapshots</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
+                <h4><i class="fa-solid fa-chart-line" style="color: #0D9488;"></i> SmokePing Latency & Jitter Monitor</h4>
+                <p>LXC-container m. SmokePing til overvågning af pakketab (ICMP probes), RTT latens, jitter (standardafvigelse) og linjestabilitet mod eksterne og interne endpoints.</p>
+                <div class="tag-list">
+                  <span class="tag teal">SmokePing</span>
+                  <span class="tag">LXC Container</span>
+                  <span class="tag">Latency & Jitter</span>
+                  <span class="tag">Network Health</span>
                 </div>
               </div>
             </div>
@@ -563,8 +589,20 @@
 
             <div class="project-card">
               <div>
+                <h4><i class="fa-solid fa-grip" style="color: #2563EB;"></i> Heimdall Central Dashboard Stack</h4>
+                <p>Centraliseret Heimdall application dashboard m. integration og hurtigadgang til samtlige interne tjenester (Heimdall, SmokePing, MySpeed, Navidrome, Docker m.fl.).</p>
+                <div class="tag-list">
+                  <span class="tag blue">Heimdall</span>
+                  <span class="tag">Application Dashboard</span>
+                  <span class="tag">LXC Stack</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div>
                 <h4><i class="fa-brands fa-docker" style="color: #2496ED;"></i> Docker & Podman Stack</h4>
-                <p>Selvhostede microservices styret via Docker Compose, inklusive DNS-filtrering, reverse proxy og interne værktøjer.</p>
+                <p>Selvhostede microservices styret via Docker Compose, inklusive DNS-filtrering, reverse proxy og interne support-værktøjer.</p>
                 <div class="tag-list">
                   <span class="tag blue">Docker Compose</span>
                   <span class="tag">Podman</span>
@@ -577,7 +615,7 @@
             <div class="project-card">
               <div>
                 <h4><i class="fa-brands fa-ubuntu" style="color: #E95420;"></i> Ubuntu Server & Bash Scripting</h4>
-                <p>Drift af Linux-servere m. automatiseret disk- og hukommelses-overvågning via Bash scripts og scheduled cron-jobs.</p>
+                <p>Drift af Linux-servere m. automatiseret disk- og hukommelses-overvågning via Bash scripts og scheduled cron-jobs til containeropdateringer (`update-containers.sh`).</p>
                 <div class="tag-list">
                   <span class="tag">Ubuntu Server</span>
                   <span class="tag">Bash</span>
