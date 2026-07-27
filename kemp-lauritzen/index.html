@@ -215,6 +215,58 @@
       background-color: #475569;
     }
 
+    /* Mobile Responsive Styling */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px 0;
+      }
+
+      .page-container {
+        padding: 25px 20px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-right {
+        text-align: left;
+      }
+
+      .meta-block {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .meta-right {
+        text-align: left;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      .print-controls {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        padding: 0 15px;
+      }
+
+      .print-controls .btn {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .attachments {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
     /* Print styling */
     @media print {
       body {
