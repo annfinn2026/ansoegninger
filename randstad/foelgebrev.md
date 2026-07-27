@@ -30,7 +30,7 @@
 
 ### 👤 Kontaktoplysninger:
 * **Navn:** Hans Annfinn Johannesen
-* **Adresse:** Nøddevang 8, 2770 Kastrup
+* **Adresse:** 2770 Kastrup
 * **Telefon:** [+45 28 15 70 16](tel:+4528157016)
 * **E-mail:** [johannesen@keemail.me](mailto:johannesen@keemail.me)
 * **LinkedIn:** [Hans Annfinn Johannesen](https://www.linkedin.com/in/hans-a-johannesen-b27127419/)
