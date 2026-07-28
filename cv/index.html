@@ -13,6 +13,8 @@
   
   <style>
     :root {
+      --bg-body: #f1f5f9;
+      --card-bg: #ffffff;
       --primary: #0F464B;       /* HOFOR Dark Teal */
       --primary-light: #186067; /* Mid Teal */
       --accent: #2563eb;        /* Royal Blue */
@@ -21,19 +23,39 @@
       --text-muted: #64748b;    /* Slate 500 */
       --sidebar-bg: #f8fafc;    /* Slate 50 */
       --border: #e2e8f0;        /* Slate 200 */
+      --badge-bg: #e0f2fe;
+      --badge-text: #0369a1;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #0F172A;
+      --card-bg: #1E293B;
+      --primary: #38BDF8;
+      --primary-light: #7DD3FC;
+      --accent: #60A5FA;
+      --accent-light: #1E3A8A;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --sidebar-bg: #0F172A;
+      --border: #334155;
+      --badge-bg: #334155;
+      --badge-text: #38BDF8;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
       line-height: 1.5;
-      background-color: #f1f5f9;
+      background-color: var(--bg-body);
       padding: 40px 0;
     }
 
@@ -41,8 +63,8 @@
     .cv-container {
       max-width: 900px;
       margin: 0 auto;
-      background: #ffffff;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
       border-radius: 8px;
       overflow: hidden;
       display: flex;
@@ -171,13 +193,13 @@
     }
 
     .badge {
-      background-color: #f2f7f7;
-      color: var(--primary);
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
       font-size: 12px;
       font-weight: 500;
       padding: 5px 10px;
       border-radius: 4px;
-      border: 1px solid rgba(15, 70, 75, 0.15);
+      border: 1px solid var(--border);
     }
 
     /* Languages & Courses */
@@ -409,6 +431,7 @@
   <!-- Print and Navigation Controls (hidden when printing) -->
   <div class="print-controls">
     <a href="../index.html" id="back-link" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage</a>
+    <button id="theme-toggler" class="btn btn-secondary" onclick="toggleTheme()"><i class="fa-solid fa-moon"></i> <span id="theme-text">Dark Mode</span></button>
     <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
   </div>
 
@@ -596,6 +619,41 @@
   </div>
 
   <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const themeText = document.getElementById('theme-text');
+      const themeBtn = document.getElementById('theme-toggler');
+      
+      const currentTheme = html.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      if (themeText && themeBtn) {
+        if (newTheme === 'dark') {
+          themeText.textContent = 'Light Mode';
+          themeBtn.querySelector('i').className = 'fa-solid fa-sun';
+        } else {
+          themeText.textContent = 'Dark Mode';
+          themeBtn.querySelector('i').className = 'fa-solid fa-moon';
+        }
+      }
+    }
+
+    // Initialize saved theme preference
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const themeText = document.getElementById('theme-text');
+      const themeBtn = document.getElementById('theme-toggler');
+      
+      if (savedTheme === 'dark' && themeText && themeBtn) {
+        themeText.textContent = 'Light Mode';
+        themeBtn.querySelector('i').className = 'fa-solid fa-sun';
+      }
+    })();
+
     // Hvis brugeren kommer fra en specifik ansøgning (via URL-parameter eller referrer), så lad tilbage-knappen gå derhen
     const urlParams = new URLSearchParams(window.location.search);
     const fromParam = urlParams.get('from');
