@@ -59,6 +59,20 @@
       gap: 30px;
     }
 
+    .profile-photo-container {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    }
+
     /* Main Content (Right) */
     .main-content {
       width: 68%;
@@ -401,6 +415,11 @@
   <div class="cv-container">
     <!-- Left Sidebar -->
     <aside class="sidebar">
+      <!-- Profile Photo -->
+      <div class="profile-photo-container">
+        <img src="../images/profile.png" alt="Hans Annfinn Johannesen" class="profile-photo">
+      </div>
+
       <!-- Contact Info Section -->
       <div>
         <h3 class="section-title">Kontakt</h3>

@@ -157,6 +157,22 @@
       gap: 24px;
     }
 
+    .hero-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .hero-profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+    }
+
     .hero-title {
       font-size: 32px;
       font-weight: 800;
@@ -423,6 +439,14 @@
       .hero-section {
         padding: 25px;
       }
+      .hero-header-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-profile-img {
+        width: 130px;
+        height: 130px;
+      }
       .nav-links {
         display: none;
       }
@@ -464,8 +488,13 @@
 
     <!-- About Section -->
     <section id="about" class="hero-section">
-      <h1 class="hero-title">Om Mig 🖐️</h1>
-      <h2 class="hero-subtitle">IT-Supporter & Formidler | 25 års ledelseserfaring + Hands-on Hjemmelab & Support</h2>
+      <div class="hero-header-flex">
+        <img src="images/profile.png" alt="Hans Annfinn Johannesen" class="hero-profile-img">
+        <div>
+          <h1 class="hero-title">Om Mig 🖐️</h1>
+          <h2 class="hero-subtitle">IT-Supporter & Formidler | 25 års ledelseserfaring + Hands-on Hjemmelab & Support</h2>
+        </div>
+      </div>
 
       <div class="hero-bio">
         <p>
