@@ -1,4 +1,4 @@
-# Hans Annfinn Johannesen
+# Hans A. Johannesen
 ### Erfaren Pædagog & Tidligere Souschef
 
 **Kontaktinformation:**
