@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansøgning - IT-Koordinator - Hans Annfinn Johannesen</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #0f172a;       /* Slate 900 */
+      --primary-light: #0d9488; /* Teal 600 */
+      --accent: #14b8a6;        /* Teal 500 */
+      --accent-light: #f0fdfa;  /* Soft Teal Background */
+      --text: #334155;          /* Slate 700 */
+      --text-muted: #64748b;    /* Slate 500 */
+      --border: #e2e8f0;        /* Slate 200 */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: #f8fafc;
+      padding: 40px 0;
+    }
+
+    /* Page Container */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      padding: 50px 60px;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header-left h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .header-left h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--primary-light);
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .header-right a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .header-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metadata Block */
+    .meta-block {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--accent-light);
+      border-left: 4px solid var(--primary-light);
+      padding: 15px 20px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .meta-left {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-right {
+      text-align: right;
+      color: var(--text-muted);
+    }
+
+    /* Content Styling */
+    .subject {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .paragraph-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 14.5px;
+      text-align: justify;
+    }
+
+    ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+      font-size: 14.5px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .sign-off {
+      margin-top: 40px;
+    }
+
+    .sign-off p {
+      margin-bottom: 5px;
+    }
+
+    /* Attachments Footer */
+    .attachments {
+      margin-top: 50px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .attachments i {
+      color: var(--primary-light);
+    }
+
+    .attachments a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attachments a:hover {
+      text-decoration: underline;
+    }
+
+    /* Print Controls */
+    .print-controls {
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary-light);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #0f766e;
+    }
+
+    .btn-secondary {
+      background-color: #64748b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #475569;
+    }
+
+    /* Mobile Responsive Styling */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px 0;
+      }
+
+      .page-container {
+        padding: 25px 20px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .header-right {
+        text-align: left;
+      }
+
+      .meta-block {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .meta-right {
+        text-align: left;
+      }
+
+      p {
+        text-align: left;
+      }
+
+      .print-controls {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        padding: 0 15px;
+      }
+
+      .print-controls .btn {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .attachments {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+      .page-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .print-controls {
+        display: none;
+      }
+      @page {
+        size: A4;
+        margin: 2cm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print and Navigation Controls -->
+  <div class="print-controls">
+    <a href="../index.html" class="btn btn-secondary"><i class="fa-solid fa-arrow-left"></i> Tilbage til Portfolio</a>
+    <a href="../cv/index.html" class="btn btn-secondary"><i class="fa-solid fa-address-card"></i> Vis Mit IT-CV</a>
+    <button onclick="window.print()" class="btn"><i class="fa-solid fa-print"></i> Gem som PDF / Print</button>
+  </div>
+
+  <div class="page-container">
+    <!-- Header -->
+    <header>
+      <div class="header-left">
+        <h1>Hans Annfinn Johannesen</h1>
+        <h3>IT-Koordinator & Bindeled mellem brugere og IT</h3>
+      </div>
+      <div class="header-right">
+        <span>2770 Kastrup</span>
+        <span>Tlf: +45 28 15 70 16</span>
+        <span>E-mail: <a href="mailto:johannesen@keemail.me">johannesen@keemail.me</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/hans-a-johannesen-b27127419/" target="_blank">linkedin.com/in/hans-a-johannesen</a></span>
+      </div>
+    </header>
+
+    <!-- Metadata Block -->
+    <div class="meta-block">
+      <div class="meta-left">
+        <span><strong>Stilling:</strong> IT-Koordinator / IT-Driftsansvarlig / Digitaliseringskoordinator</span>
+        <span><strong>Fokus:</strong> Brobygning mellem mennesker og teknik, implementering, koordinering og procesoptimering</span>
+      </div>
+      <div class="meta-right">
+        <span><strong>Profil:</strong> Ledelse, Koordinering & IT-forståelse</span>
+        <span><strong>Portfolio:</strong> <a href="https://annfinn2026.github.io/ansoegninger/" target="_blank">annfinn2026.github.io</a></span>
+      </div>
+    </div>
+
+    <!-- Letter Content -->
+    <main>
+      <h2 class="subject">Ansøgning om stillingen som IT-Koordinator</h2>
+
+      <p>
+        Jeg søger med stor motivation stillingen som IT-koordinator. I mange organisationer opstår der et gab mellem den centrale IT-afdelings tekniske løsninger og brugernes praktiske hverdag. Min store force er evnen til at bygge bro over dette gab: Med 25 års erfaring som pædagog, souschef, institutionsleder og tillidsrepræsentant kombineret med en stærk teknisk IT-forståelse taler jeg flydende med både teknikere, eksterne leverandører og de slutbrugere, som IT-løsningerne skal skabe værdi for.
+      </p>
+
+      <h3 class="paragraph-title">Brobygger mellem praksis og teknologi</h3>
+      <p>
+        Gennem min lederbaggrund er jeg vant til at koordinere mange interessenter, holde overblik over deadlines og sikre, at administrative og tekniske forandringer lander trygt hos medarbejderne. Jeg formår at oversætte komplekse IT-krav og sikkerhedspolitikker til en meningsfuld og handlingsorienteret praksis. Når nye systemer udrulles, sikrer jeg, at brugerne ikke blot modtager et stykke software, men rent faktisk forstår at bruge det effektivt og trygt i deres daglige arbejdsgange.
+      </p>
+
+      <h3 class="paragraph-title">Erfaring med udrulning, drift og leverandørdialog</h3>
+      <p>
+        I mit mangeårige virke som IT-ansvarlig i institutionsregi og gennem min erhvervspraktik i Koncern IT (Københavns Kommune) har jeg opnået solid erfaring med koordinerende IT-opgaver:
+      </p>
+      <ul>
+        <li><strong>Strukturering af IT-arbejdsgange:</strong> Ansvar for planlægning og koordinering af hardwareudrulninger, PC-arbejdspladser, skærme, tablets og netværk.</li>
+        <li><strong>Implementering og brugerstøtte:</strong> Superbruger og sparringspartner på administrative platforme (bl.a. Aula og kommunale fagsystemer), herunder udarbejdelse af lettilgængelige brugervejledninger.</li>
+        <li><strong>Procesoverblik & Ticketing:</strong> Kendskab til sagsgange og prioritering i ServiceNow samt samarbejde med 2nd line teknikere og eksterne hardwareleverandører.</li>
+        <li><strong>Bruger- & Rettighedsstyring:</strong> Koordinering af onboarding/offboarding, licenser og adgangsstyring i Active Directory / Entra ID.</li>
+      </ul>
+
+      <h3 class="paragraph-title">Teknisk funderet med procesmæssig helhedsforståelse</h3>
+      <p>
+        Fordi jeg i min fritid selv arbejder aktivt med Linux, Docker, netværkskonfiguration (OPNsense, DNS, DHCP) og virtualisering på Proxmox, bliver jeg aldrig blot en passiv administrator. Jeg forstår maskinrummet og de tekniske afhængigheder. Det giver mig en enestående fordel, når jeg skal sparre med centrale IT-specialister og formulere præcise kravspecifikationer til eksterne leverandører.
+      </p>
+
+      <h3 class="paragraph-title">Struktureret, løsningsorienteret og relationsstærk</h3>
+      <p>
+        Som person kendetegnes jeg ved en høj stresstærskel, et smittende humør og en udpræget ordenssans. Jeg møder mine omgivelser med åbenhed og anerkendelse, og jeg motiveres af at skabe velfungerende arbejdsrammer, hvor teknologi letter hverdagen i stedet for at spænde ben.
+      </p>
+
+      <p>
+        Jeg ser frem til at mødes til en samtale, hvor jeg kan uddybe, hvordan min koordinerende erfaring og tekniske nysgerrighed kan bidrage til en smidig IT-hverdag hos jer.
+      </p>
+
+      <!-- Sign Off -->
+      <div class="sign-off">
+        <p>Med venlig hilsen,</p>
+        <br>
+        <p><strong>Hans Annfinn Johannesen</strong></p>
+      </div>
+    </main>
+
+    <!-- Attachments Section -->
+    <footer class="attachments">
+      <span><i class="fa-solid fa-paperclip"></i> <strong>Relevante links:</strong></span>
+      <a href="../cv/index.html" target="_blank"><i class="fa-solid fa-address-card"></i> IT-Curriculum Vitae (CV)</a>
+      <a href="https://github.com/annfinn2026/it-support-scripts" target="_blank"><i class="fa-solid fa-code"></i> IT Support Scripts (GitHub)</a>
+      <a href="https://annfinn2026.github.io/ansoegninger/" target="_blank"><i class="fa-solid fa-globe"></i> Fuld Portfolio</a>
+    </footer>
+  </div>
+
+</body>
+</html>
