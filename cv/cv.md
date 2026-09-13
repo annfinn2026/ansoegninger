@@ -1,11 +1,13 @@
 # Hans A. Johannesen
-### Erfaren Pædagog & Tidligere Souschef
+### IT-Supporter & Formidler
 
 **Kontaktinformation:**
 * **Adresse:** 2770 Kastrup
 * **Telefon:** [+45 28 15 70 16](tel:+4528157016)
-* **E-mail:** [hajohannesen@hotmail.com](mailto:hajohannesen@hotmail.com)
-* **Uddannelsesbevis:** [Se pædagogbevis](https://myndir.duckdns.org/s/0UnQYfiEq)
+* **E-mail:** [johannesen@keemail.me](mailto:johannesen@keemail.me)
+* 🌐 **Online Portfolio & CV:** [annfinn2026.github.io/ansoegninger](https://annfinn2026.github.io/ansoegninger/)
+* 💻 **GitHub (Scripts & Projekter):** [github.com/annfinn2026](https://github.com/annfinn2026)
+* 🔗 **LinkedIn:** [linkedin.com/in/hans-a-johannesen](https://www.linkedin.com/in/hans-a-johannesen-b27127419/)
 
 ---
 
